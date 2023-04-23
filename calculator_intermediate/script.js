@@ -37,12 +37,14 @@ buttons.forEach((button) => {
     });
 });
 
+//TODO funcion para sumar 
 display.addEventListener("click", () => { });
 bntAdd.addEventListener("click", () => { })
 btnSubstract.addEventListener("click", () => { })
 btnDecimal.addEventListener("click", () => { })
 btnDivide.addEventListener("click", () => { })
 btnClear.addEventListener("click", () => { })
+//TODO funcion para mostrar el resultado
 btnEquals.addEventListener("click", () => { })
 btnBackspace.addEventListener("click", () => { })
 
