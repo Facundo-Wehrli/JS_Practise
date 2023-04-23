@@ -20,25 +20,24 @@ const btnClear = document.getElementById("btn-clear");
 const btnEquals = document.getElementById("btn-equals");
 const btnBackspace = document.getElementById("btn-backspace");
 const display = document.querySelector(".display");
+const buttons = document.querySelectorAll(".button");
 
-let currentNumber;
+function handleClick(number) {
+    if (number === "-" || number === "+" || number === "/" || number === "*" || number === "C" || number === "=" || number === "." || number === "&#x2190;") {
+        return;
+    }
 
-btn0.addEventListener("click", () => {
-    currentNumber = 0;
-    display.textContent = currentNumber;
+    display.textContent += number;
+}
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const number = button.textContent;
+        handleClick(number);
+    });
 });
-btn1.addEventListener("click", () => { });
-btn2.addEventListener("click", () => { });
-btn3.addEventListener("click", () => { });
-btn4.addEventListener("click", () => { });
-btn5.addEventListener("click", () => { });
-btn6.addEventListener("click", () => { });
-btn7.addEventListener("click", () => { });
-btn8.addEventListener("click", () => { });
-btn9.addEventListener("click", () => { });
+
 display.addEventListener("click", () => { });
-
-
 bntAdd.addEventListener("click", () => { })
 btnSubstract.addEventListener("click", () => { })
 btnDecimal.addEventListener("click", () => { })
