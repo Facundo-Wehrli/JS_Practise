@@ -49,7 +49,15 @@ body {
     color: #333;
     cursor: pointer;
     transition: background-color 0.2s ease-in;
+
 }
+
+#btn-equals {
+    grid-column: 4;
+    background-color: #5cb85c;
+    color: #fff;
+}
+
 
 .button:hover {
     background-color: #d4d4d4;
@@ -96,17 +104,4 @@ body {
 
 .button-clear:active {
     background-color: #ac2925;
-}
-
-.button-backspace {
-    background-color: #337ab7;
-    color: #fff;
-}
-
-.button-backspace:hover {
-    background-color: #286090;
-}
-
-.button-backspace:active {
-    background-color: #204d74;
 }
