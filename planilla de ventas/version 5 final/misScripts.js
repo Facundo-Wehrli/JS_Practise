@@ -45,8 +45,7 @@ function crearParrafotienda(textoLabel, valorMin) {
 }
 
 function extraerNumeroDesdeElemento(elemento) {
-    let miElemento = document.getElementById(elemento);
-    let miTexto = miElemento.value;
+    let miTexto = elemento.value;
     let miNumero = Number(miTexto);
 
     return miNumero;
@@ -54,21 +53,37 @@ function extraerNumeroDesdeElemento(elemento) {
 
 function calcular() {
     let ventas = [];
+    let posicionVentas = 0;
+    let elementosVentas = document.getElementById("itemsTiendas");
 
-    ventas[0] = extraerNumeroDesdeElemento("ventasTienda1");
-    ventas[1] = extraerNumeroDesdeElemento("ventasTienda2");
-    ventas[2] = extraerNumeroDesdeElemento("ventasTienda3");
-    ventas[3] = extraerNumeroDesdeElemento("ventasTienda4");
-    ventas[4] = extraerNumeroDesdeElemento("ventasTienda5");
-    ventas[5] = extraerNumeroDesdeElemento("ventasTienda6");
+    for(let item of elementosVentas.children) {
+        let valorVenta = extraerNumeroDesdeElemento(item.children[1]);
+        ventas[posicionVentas] = valorVenta;
+        posicionVentas = posicionVentas + 1;
+    }
 
     let totalVentas = sumarTotal(ventas);
     let ventaMayor = calcularMayor(ventas);
     let ventaMenor = calcularMenor(ventas);
 
-    let mensajeSalida = "Total Ventas: " + totalVentas + 
-                        " / Venta Mayor: " + ventaMayor +
-                        " / Venta Menor: " + ventaMenor;
+    //agregamos esta función que le cambia el agrega color a las ventas mayores y menores
+    for (let item of elementosVentas.children) {
+        let valorVenta = extraerNumeroDesdeElemento(item.children[1]);
+
+        item.children[1].className = "menuNeutro";
+
+        if(valorVenta==ventaMayor) {
+            item.children[1].className = "menuInputMayor";
+        }
+
+        if(valorVenta==ventaMenor) {
+            item.children[1].className = "menuInputMenor";
+        }
+    }
+
+
+    let mensajeSalida = "Total Ventas: " + totalVentas;
+    
     let elementoSalida = document.getElementById("parrafoSalida");
 
     elementoSalida.textContent = mensajeSalida;
