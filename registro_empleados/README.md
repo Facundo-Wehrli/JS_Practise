@@ -6,12 +6,12 @@
 
 * cómo modificarlos
 
-*this
+* this
 
-*constructores
+* constructores
 
-*parámetros de constructor
+* parámetros de constructor
 
-*OOP
+* OOP
 
-*loop for in
+* loop for in
