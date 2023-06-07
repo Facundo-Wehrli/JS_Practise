@@ -1,1 +1,1 @@
-# Projects to learn and practise JavaScript 🧉 #
+# Simple Projects to learn and practise JavaScript 🧉 #
