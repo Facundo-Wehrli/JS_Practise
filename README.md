@@ -1,8 +1,17 @@
 # Simple Projects to learn and practise JavaScript 🧉 #
-- ## ASYNC AWAIT ##
-- ## PROMISES ##
+- ## Async Await ##
+- ## Promises ##
 - ## CRUD ##
-- ## FETCH ##
-- ## BUNDLING ##
-- ## MODULES ##
-
+- ## Fetch ##
+- ## Bundling ##
+- ## Modules ##
+- ## Axios ##
+- ## Handling events ##
+- ## Prototype ##
+- ## Object ##
+- ## OOP ##
+- ## this ##
+- ## Constructors ##
+- ## Getters & Setters ##
+- ## Inheritance ##
+ ## And much more !! ##
